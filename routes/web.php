@@ -22,7 +22,7 @@ Route::get('test123', function () {
 Route::get('test/{id}', 'IndexController@test');
 
 
-
+// 模块/控制器/方法    路由和视图的路径是一致的
 Route::get('admin/index/index', 'Admin\IndexController@index');
 Route::get('admin/index/add', 'Admin\IndexController@add');
 //Route::get('test/{id}', 'IndexController@test');
