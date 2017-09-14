@@ -8,11 +8,18 @@
     <title>admin/index/index/模板测试</title>
 </head>
 <body>
+
 <?php
+    //原生写法使用
     foreach ($user as $k=>$v){
         echo $v->username;
     }
 ?>
+
+<!-- lv 数据展示的写法 -->
+@foreach($user as $k=>$v)
+    <p>{{ $v->username }}</p>
+@endForeach
 <p>dsafjdslkfkldsajl</p>
 </body>
 </html>
