@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 //use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class IndexController extends Controller
@@ -37,6 +39,11 @@ class IndexController extends Controller
         $this->middleware('guest')->except('logout');
     }*/
     public function index(){
-        echo 'admin index/index';
+        $users = DB::select('select * from l_admin');
+//var_dump($users);die;
+//        $assign = compact('data');
+        return view('admin/index/index')->with('user',$users);
+      /*  echo 'hello world';
+        echo 'admin index/index';*/
     }
 }
