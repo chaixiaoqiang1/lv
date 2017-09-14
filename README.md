@@ -12,4 +12,4 @@
 6、css,js,img放在public目录下，也是根目录下地址引用更方便。  
 7、在视图间共享数据(view()->share('key', 'value')  
 )。
-
+8、模板继承(参考Blade模板)。
