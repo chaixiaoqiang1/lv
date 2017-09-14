@@ -9,5 +9,9 @@
 </head>
 <body>
 <p>sflkdjslfkjdslfjsadk</p>
+
+<hr />
+<p>{{ $title }}</p>
+<p>{{ $content }}</p>
 </body>
 </html>
