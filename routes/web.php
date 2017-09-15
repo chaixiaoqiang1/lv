@@ -20,6 +20,8 @@ Route::get('test123', function () {
 });
 
 Route::get('test/{id}', 'IndexController@test');
+Route::get('/show', 'Home\IndexController@show');
+Route::get('/db_select', 'Home\IndexController@db_select');
 
 
 // 模块/控制器/方法    路由和视图的路径是一致的

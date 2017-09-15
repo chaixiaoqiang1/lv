@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class IndexController extends CommonController
+class CommonController extends Controller
 {
+    public function __construct()
+    {
+        return view()->share('name','周至二中');
+    }
+
     // 模板的使用方式以及数据展示，是否使用模板引擎
     public function show(){
         echo 'ehldjsalkf';
