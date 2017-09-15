@@ -38,12 +38,11 @@ Route::get('index/test/{id}', 'IndexController@test');
 Route::get('/yzm', function(){
     $builder = new CaptchaBuilder;
     $builder->build();
-    /*header('Content-type: image/jpeg');
-    $builder->output();*/
+
+    // 把验证码值存进session
+    session(['captcha'=> $builder->getPhrase()]);
+
     return response($builder->output())->header('Content-type','image/jpeg');
 });
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
