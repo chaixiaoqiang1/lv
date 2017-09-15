@@ -14,7 +14,7 @@
 8、http层csrf表单验证，控制器中validate验证(可以在Http/requests中自定义request验证类)，依赖注入Request类（php类型约束）【未验证】。
 9、验证码(包引用网址：packagist中国镜像[composer]上搜索[gregwar/captcha]，项目根目录下使用composer命令)[项目里composer.json文件中添加配置项后使用命令(composer update)]
 ,response方法响应在线输出验证码图片。
-10、laravel中如何使用session。
+10、laravel中如何使用session。  
 11、加密  
 12、附录——辅助函数  
-13、
+13、Http层中间件
