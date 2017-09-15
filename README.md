@@ -7,7 +7,7 @@
 1、学习了路由，laravel是得路由的，所以要先写路由才行。 
 2、学习了控制器以及命令行创建控制器的方法（php artisan  make:controller Home/IndexController）。  
 3、学习了视图，变量分配，两种命名方式，加blade的可以使用laravel模板标签。
-4、学习了数据库的连接与操作。  
+4、学习了数据库的连接与操作，配置文件有两个(.env和config/database.php)。  
 5、css,js,img放在public目录下，也是根目录下(引用方式是利用asset方法)，如果配置指向Public目录下的域名就可以直接使用根目录。  
 6、在视图间共享数据(view()->share('key', 'value'))。    
 7、模板继承(参考Blade模板)。
