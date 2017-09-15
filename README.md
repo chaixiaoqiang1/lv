@@ -13,3 +13,4 @@
 7、在视图间共享数据(view()->share('key', 'value')  
 )。
 8、模板继承(参考Blade模板)。
+9、http层csrf表单验证，控制器中validate验证(可以在Http中自定义require验证类)，依赖注入Request类（php类型约束）。
