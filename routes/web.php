@@ -11,6 +11,10 @@
 |
 */
 
+//使用验证码类的命名空间
+use Gregwar\Captcha\CaptchaBuilder;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,3 +33,17 @@ Route::get('admin/index/index', 'Admin\IndexController@index');
 Route::get('admin/index/add', 'Admin\IndexController@add');
 //Route::get('test/{id}', 'IndexController@test');
 Route::get('index/test/{id}', 'IndexController@test');
+
+//验证码的使用  输出显示方式要用response
+Route::get('/yzm', function(){
+    $builder = new CaptchaBuilder;
+    $builder->build();
+    /*header('Content-type: image/jpeg');
+    $builder->output();*/
+    return response($builder->output())->header('Content-type','image/jpeg');
+});
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
