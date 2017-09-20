@@ -14,6 +14,13 @@
 //使用验证码类的命名空间
 use Gregwar\Captcha\CaptchaBuilder;
 
+// 模块化学习一个框架  增删改查
+Route::get('test/index', 'Home\TestController@index');
+Route::any('test/add', 'Home\TestController@add');
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,7 +30,7 @@ Route::get('test123', function () {
     return view('test');
 });
 
-Route::get('test/{id}', 'IndexController@test');
+//Route::get('test/{id}', 'IndexController@test');
 Route::get('/show', 'Home\IndexController@show');
 Route::get('/db_select', 'Home\IndexController@db_select');
 Route::any ('/form_test', 'Home\IndexController@form_test'); //表单验证测试
@@ -46,5 +53,8 @@ Route::get('/yzm', function(){
 
     return response($builder->output())->header('Content-type','image/jpeg');
 });
+
+
+
 
 

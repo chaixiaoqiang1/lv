@@ -46,6 +46,11 @@ class IndexController extends CommonController
 //        }
         return view('home.index.form_test');
     }
+    // 路由请求方式
+//        http://localhost/test/lv/public/index.php/index/test?id=1&name=%E7%99%BD%E4%BF%8A%E9%81%A5  可行
+//        http://localhost/test/lv/public/index.php/index/test/id/1/name/%E7%99%BD%E4%BF%8A%E9%81%A5  不可行
+//        http://localhost/test/lv/public/index.php/index/test/id/1?name=%E7%99%BD%E4%BF%8A%E9%81%A5  不可行
+//        http://localhost/test/lv/public/index.php/index/test/1?name=%E7%99%BD%E4%BF%8A%E9%81%A5  可行但是路由要为Route::get('index/test/{id}', 'IndexController@test');
     //接收表单数据
     public function js_form(Request $request){
         if($request->isMethod('post')){
