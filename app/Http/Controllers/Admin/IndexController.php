@@ -22,7 +22,4 @@ class IndexController extends Controller
         return view('admin/index/index')->with('user',$users);
     }
 
-    public function add(){
-        echo 'add';
-    }
 }
