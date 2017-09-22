@@ -25,3 +25,6 @@
 
 
 342哈士奇fdsfdsfds
+
+
+test sublime git 
